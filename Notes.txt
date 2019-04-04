@@ -1,0 +1,36 @@
+				Design notes for Slippr
+				=======================
+
+		NOT PRIVATE: NOW IN VERSION CONTROL
+
+Slippr was intended to provide a quick way to produced minimalist
+web sites. The expectation was that these would look quite similar
+to my Wordpress sites having :
+
+	A single index file which selects and assembles the content, in
+		a similar manner to Noof.
+
+	A header and footer that apply to all pages (Version info can be
+		inserted at time of deployment).
+
+	A one-word menu across the to corresponding to magazine sections
+		This would select the directory containing the related info -
+		the Context.
+
+	A menu on the RHS with explanatory text
+		This selects a file which is included for the LHS.
+
+	A main (LHS) panel which is filled with a file selected by the menu
+		 on the RHS, but with a default.
+
+This was built and it was soon discovered that the trick was to have an Example
+directory which iss over-written on deployment. This holds instructions
+on how to deploy which are normally hidden from end users.
+
+Placement of pictures in text still needs work. Current thinking is
+to divide the LHS DIV into rows and columns using the Bootstrap tools. 
+
+ Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 
+
+4 April 2019
+
