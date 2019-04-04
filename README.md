@@ -1,2 +1,2 @@
 # Slippr
-Slippr - Simple Bootstrap based framework
+Slippr - Slap some sense into your website.
