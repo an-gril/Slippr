@@ -1,18 +1,12 @@
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
-<!--
- Slippr - Bootstrap based Framework
-
-may be a case for having context button like the task button
-and a procedure to build the menu from a structure, but not
-implemented yet. 
--->
+<!-- Slippr - a Bootstrap based Framework -->
 
  <form class="navbar-form navbar-inverse" action="/index.php" method="post">
    <div class="container-fluid">
     <div class="button-group btn-group-justified">
       <input class="nav-pills btn-primary" type="submit" name="ctxt" value="Home">Home
       </input>
-      <input class="nav-pills  btn-primary" type="submit" name="ctxt"value="Files">Files
+      <input class="nav-pills  btn-primary" type="submit" name="ctxt"value="Default">Default
       </input>
 
 

@@ -1,15 +1,8 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 
-<?php
-
-$menu = array(
-"Home" => "<td/>Home screen",
-"Design" => "<td/>Design rules for Slippr",
-"Deploy" => "<td/>Typical deployment script",
-"Release" => "<td/>Release notes",
-"Help" => "<td/>Get some help!"
-);
-
-make_page_menu($menu, "images/RTFM.jpg");
-
-?>
+<h2 >Cookie policy</h2>
+<p align=center>
+We only use chocolate chip cookies, and only during daylight hours
+(unless we are very hungry).
+</p>

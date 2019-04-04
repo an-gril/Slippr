@@ -1,3 +1,4 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 <?php
 // A set of tools for creating the local (in context) menus and modals

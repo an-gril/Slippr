@@ -1,3 +1,4 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 
 <h2 align=center>This is Slippr - a diminutive Bootstrap framework</h2>

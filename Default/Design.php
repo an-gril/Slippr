@@ -1,3 +1,4 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 <h2 align="center">Deployment.</h2>
 <p> &nbsp;</p>
@@ -40,13 +41,7 @@ system is not secure enough to handle anything more complex than a check box or
 radio button. Do not try to implement user validation this way! (Or anything
 involving user input of values). 
 </p>
-<p>The file "sub_menu.php"  is displayed beneath the page menu. This is
-typically used to place a picture and caption to make each Context look
-unique. 
-</p>
-<p>The context menu (bar across the top of the screen) is built by a script 
-at install time. Only directories containing a file called "context.yes" are
-added to the menu. If this file contains the word "debug", then the menu
-entry only appears if debugging. 
+<p>If it exists, the file "sub_menu.php"  is displayed beneath the page menu. 
+This can be used to place cookie policy, contact info or similar.
 </p>
 

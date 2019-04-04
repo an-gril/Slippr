@@ -1,4 +1,5 @@
-<p>Menu
+<!-- Slippr - a Bootstrap based Framework -->
+<p>
 </P>
 <?php
 include "lib/menu_tools.php";

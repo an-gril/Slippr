@@ -1,11 +1,12 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 
-<h2 align="center">Slippr - pre-release version.</h2>
+<h2 align="center">Slippr - first ever release.</h2>
 <p> &nbsp;</p>
 <p align=center><img src="images/Area.png"/> </p>
 <p> &nbsp;</p>
-<p>This version of Slipper is pre-release and not for production use. At this 
-time, it has had some testing, and should not explode without warning.
+<p>This version of Slipper is the first release. At this time, it has had 
+some testing, and should not explode without warning.
 </p>
 <p>It was built on 4 April 2019.
 </p> 

@@ -1,12 +1,12 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 
 <h2 align="center">Slippr - developer help.</h2>
 <p> &nbsp;</p>
 <p>
 </p>
-<p>Slippr is used to produce very simple (ie no database) sites where a CMS
-like Noof would be overkill. Slippr has no support for login,
-so content has to be entered off-line. 
+<p>Slippr is used to produce very simple (ie no database) sites. 
+Slippr has no support for login, so content has to be entered off-line. 
 </p>
 <p>As the site designer, you are expected to build your site by adding a
 series of directories which act like "Sections" in magazines.
@@ -19,13 +19,12 @@ directory should have a capitalised one-word name, which must be added to
 the menu in your "/local". 
 </p>
 <p>Each context directory must have, as a minimum, a 
-"Home.php" file and a "Help.php" file- clone these and edit them. 
-It also needs a menu.php file which will choose pages to which over write 
+"Home.php" file and a "page_menu.php" file - clone these and edit them. 
+The page_menu.php file which will choose pages to which over write 
 the Home.php page. Do not put spaces in the menus - it can be done by 
 jiggery-pokery, but leads to un-reproduceble browser dependent bugs which 
-will cause nightmares. 
-You should have a Help.php file and menu entry pointing to it in 
-each context. 
+will cause nightmares. You can have a Help.php file and menu entry 
+pointing to it in each context. 
 </p>
 <p>Each time you update your website, you should copy the content of your
 /home directory over the top of /Default - which will over-write this page.

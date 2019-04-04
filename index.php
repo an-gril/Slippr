@@ -1,5 +1,5 @@
 <?php
-/* Slippr - A Bootstrap skeleton
+/* Slippr - A Bootstrap based skeleton framework
  * (C) 2019, Andrew Grillet, released under GPL 2.0
  *  
  * This file completely determines the flow of control in the basis of the
@@ -127,6 +127,11 @@ print("\n</DIV>"); // end left screen
 		{
         $Menu =  $Context . "/Menu.php";
         include $Menu;
+		}
+
+	if(file_exists($Context . "/sub_menu.php"))
+		{
+        $Menu =  $Context . "/sub_menu.php";
 		}
 
     print("\n</DIV>"); // end help_right

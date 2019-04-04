@@ -1,3 +1,4 @@
+<!-- Slippr - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 <footer class="container-fluid bg-4 text-center">
 <p align=center><img src="images/Sun_logo_small.png" alt="Sun Logo"/>&nbsp;&nbsp;

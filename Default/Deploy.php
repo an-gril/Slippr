@@ -33,8 +33,9 @@ of the entire directory tree to that of the server. YMMV.
 #<br>
 # Deploy new version of Slippr and Site<br>
 # (Site uses Slippr for infrastructure)<br>
-svn export --force --username www --password top-secret \<br>
-  svn://svn.grillet.home/var/svn/slippr/trunk /var/www/site<br>
+svn export --force --username anonymous  \<br>
+  svn://github.com/an-gril/Slippr/trunk /var/www/site<br>
+
 svn export --force --username www --password top-secret \<br>
   svn://svn.grillet.home/var/svn/site/trunk /var/www/site<br>
 <br>
