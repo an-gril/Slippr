@@ -32,7 +32,7 @@ global $context;
 	print("<tr><td/>&nbsp;</tr>");
 	print("</table>");
 
-	print("<p align=center><img src=$menu_picture/></p>");
+	print("<p align=center><img src=\"$menu_picture\"/></p>");
 
     if(isset($menu_caption)) 
 		print("<p align=center>$menu_caption </p>");

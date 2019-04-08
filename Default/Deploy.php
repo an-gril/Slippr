@@ -40,7 +40,7 @@ svn export --force --username www --password top-secret \<br>
   svn://svn.grillet.home/var/svn/site/trunk /var/www/site<br>
 <br>
 echo '&lt;?php \nprint &quot;&lt;p align=center>' &gt; /var/www/site/local/version.php<br>;
-echo Slippr - Experimental version .  Deployed:  >> /var/www/site/local/version.php<br>
+echo Slippr - Evaluation version .  Deployed:  >> /var/www/site/local/version.php<br>
 date >> /var/www/site/local/version.php<br>
 echo '&quot;;\n?> \n\\&lt;p> \n' >> /var/www/site/local/version.php<br>
 <br>
