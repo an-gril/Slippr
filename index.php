@@ -25,6 +25,12 @@ session_start();
 
 print("<HTML> <HEAD>");
 include "local/title.php";
+// Check if someone has set debug in the title
+if(isset($_SESSION['debug']))
+        $debug = $_SESSION['debug'];
+else
+        $debug = 0;
+
 ?>
  <!-- Get this stuff from CDN and google cos its faster than hosting myself, 
 and should be cached from other websites anyway! -->
