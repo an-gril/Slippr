@@ -39,7 +39,6 @@ $recaptcha = json_decode($curlData, true);
 
 if ($recaptcha["success"] == false)
 	{
-	echo "Captcha failure! You are a robot!<br>";
 
 	if ($debug > 0)
 		{
@@ -48,7 +47,6 @@ if ($recaptcha["success"] == false)
 	return;
 	};
 
-echo "You will be pleased to know you are not a robot!<br>";
 
 // Form info
 $record[1] = $_POST["name"];
@@ -64,5 +62,6 @@ fputcsv($csvfile, $record);
 
 fclose($csvfile);
 ?>
-<h2 align=center>Thanks. <br>You should hear from us within 48 hours.</h2>
+<h2 align=center>Thanks for getting in touch. 
+<br>You should hear from us very soon.</h2>
 
