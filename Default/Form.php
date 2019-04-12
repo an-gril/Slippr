@@ -25,13 +25,18 @@ This is not a security risk, as the file is common knowledge. You might
 have to refresh it occasionally (eg annually).
 </p>
 <p>As supplied the captured contact details are placed in /tmp/contacts.csv.
-You will need to make your own provision for copying them to somewhere more
-useful. 
+You will need to create both the directory and file yourself. This is not
+automatic, as it would risk the loss of data on update. You will need to 
+make your own provision for copying the data to somewhere more
+useful. (Maybe cron can help).
+</p>
+<p>I found emailing the contacts (like Wordpress does) to be 
+annoying. YMMV.
 </p>
 <p>I suggest code to save the contacts in a database could be useful, but
-it is hard to see how the code could be very re-useable (I assume you
-wiould want to put the data in an existing CRM database, and not make
-a new one). I found emailing the contacts (like Wordpress does) to be 
-annoying. YMMV.
+it is hard to see how the code could be very re-useable - partly
+because of issues to do with secure access to the database. I assume you
+would want to put the data in an existing CRM database, and not make
+a new one. 
 </p>
 

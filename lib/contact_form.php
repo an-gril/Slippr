@@ -17,7 +17,7 @@ include "captcha_keys.php";
 
 if(isset($_POST['Contact']))
     {
-	include "local/form_response.php";
+	include "lib/form_response.php";
 	}
 else
 	{
