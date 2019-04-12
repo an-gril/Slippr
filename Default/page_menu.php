@@ -7,6 +7,7 @@ $menu = array(
 "Home" => "<td/>Home screen",
 "Design" => "<td/>Design rules for Slippr",
 "Deploy" => "<td/>Typical deployment script",
+"Form" => "<td/>Contact form",
 "Release" => "<td/>Release notes",
 "Help" => "<td/>Get some help!"
 );
