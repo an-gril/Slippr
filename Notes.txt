@@ -1,5 +1,5 @@
-				Design notes for Slippr
-				=======================
+				Design notes for Slippr 1.0
+				===========================
 
 		NOT PRIVATE: NOW IN VERSION CONTROL
 
@@ -18,17 +18,30 @@ to my Wordpress sites having :
 		the Context.
 
 	A menu on the RHS with explanatory text
-		This selects a file which is included for the LHS.
+		This selects a file which is included for the LHS. There is a
+		contact form which can be optionally placed here.  
 
 	A main (LHS) panel which is filled with a file selected by the menu
 		 on the RHS, but with a default.
+		 
+	In order to keep conplexity down, Slippr does not use a database. (I
+		have had a similar, but more complex framwork for several years
+		which does support databases, but it is not OSS).
 
-This was built and it was soon discovered that the trick was to have an Example
-directory which iss over-written on deployment. This holds instructions
-on how to deploy which are normally hidden from end users.
+Slippr uses an Example directory which is over-written on deployment. This holds 
+instructions on how to deploy which are normally hidden from end users. (it was 
+called "Default" in version 1.0). 
 
-Placement of pictures in text still needs work. Current thinking is
-to divide the LHS DIV into rows and columns using the Bootstrap tools. 
+General practice for pictures is to divide the LHS DIV into rows and columns using 
+the Bootstrap tools. 
+
+Version 1.0 seems quite stable - it has been used for at least four websites without
+any need for updates. 
+
+Version 2 will support e-commerce (a shopping car and card payment using Stripe). To
+support this, it will use a different way (Session variables) to propagate the current 
+page and context. The user experience will be identical between the two versions, but
+you may need to modify some/all of the menus you have created yourself to upgrade. 
 
  Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 
 
