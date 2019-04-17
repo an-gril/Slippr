@@ -1,4 +1,4 @@
-<!-- Slippr - a Bootstrap based Framework -->
+<!-- Slippr Version 2 - a Bootstrap based Framework -->
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 -->
 <?php
 // A set of tools for creating the local (in context) menus and modals
@@ -50,8 +50,6 @@ print(" data-target=\"#" );
 print($target);
 print("\" >" .  $label . "</button>");
 }
-
-
 
 function task_button($page)
 {

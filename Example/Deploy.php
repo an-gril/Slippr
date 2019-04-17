@@ -1,4 +1,5 @@
-<!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 
+<!-- Slippr Version 2
+(C) 2019, Andrew Grillet, Released under GPL2.0 
         [But see below for licence of the Bash script]
 -->
 
@@ -44,12 +45,14 @@ echo Slippr - Evaluation version .  Deployed:  >> /var/www/site/local/version.ph
 date >> /var/www/site/local/version.php<br>
 echo '&quot;;\n?> \n\\&lt;p> \n' >> /var/www/site/local/version.php<br>
 <br>
-# On a production site, you need to replace the default contents from Slippr.<br>
-cp -R /var/www/site/Home/* /var/www/site/Default<br>
-# and may need to change the owner of the files to the browser's owner<br>
+# When you start, you may copy the contents of Example into Home,
+and you might want to leave a main_menu reference to it until your
+site is working properly.  <br>
+# Depending on your OS and server, you may need to change the owner of the 
+files to the browser's owner<br>
 chown -R www:www /var/www/site<br>
 </code>
-<p>This is normally placed in /var/www on OpenBSD. Linux would probably put it 
+<p>The site is normally placed in /var/www on OpenBSD. Linux would probably put it 
 somewhere else.
 </p>
 <p>You can run the script from /var/www using:<br>

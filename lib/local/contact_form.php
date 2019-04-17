@@ -1,8 +1,6 @@
 <!-- Contact_form is part of: 
- Slippr - Bootstrap based Framework
+ Slippr Version 2 - Bootstrap based Framework
  (C) 2019, Andrew Grillet
- Sani-t.uk - website
- (C) 2019, Sani-t 
 
 This is normally uses as a replacement for the content of a page menu.
 -->
@@ -17,10 +15,7 @@ include "captcha_keys.php";
 
 if(isset($_POST['Contact']))
     {
-	print("Your message was sent.<BR>");
-
-	include "local/form_response.php";
-
+	include "lib/form_response.php";
 	}
 else
 	{
@@ -29,7 +24,7 @@ else
 
 <?php
 // Record what page we are invoked from 
-print("<input type=hidden name=\"Context\"  value=\"$Context\" />");
+print("<input type=hidden name=\"Contact\"  value=\"Yes\" />");
 ?>
 <input type=hidden name="Page"  value="Home" />
 
@@ -48,6 +43,14 @@ print("<input type=hidden name=\"Context\"  value=\"$Context\" />");
     <DIV class="form-group  col-sm-9  col-sm-offset-1">
     <label for="organisation" class="control-label" >Your Organisation</label>
 	<input type=text name="organisation"  class="form-control"  placeholder="Mega Corp plc">
+	</DIV>
+  </DIV>
+
+<!-- phone -->
+  <DIV class="row">
+	<DIV class="form-group  col-sm-9  col-sm-offset-1">
+	<label for="phone" class="control-label" >phone</label>
+	<input type=text name="phone"  id="phone" class="form-control"  placeholder="+44 (0) 7555 818818">
 	</DIV>
   </DIV>
 

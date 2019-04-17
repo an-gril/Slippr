@@ -1,14 +1,14 @@
-<!-- Slippr - a Bootstrap based Framework -->
+<!-- Slippr Version 2 - a Bootstrap based Framework -->
+
 <!-- Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 
 
+ The Context determines the relevant subdirectory. Context and page
+ persist through the use of session variables.
 
- Context processing using Bootstrap
-
- The Context determines the relevant subdirectory.
- Normally, it is normally set by the top level menu: if a new value of [ctxt]
- is posted, there is a change of context. This requires the Page to be set
- to "Home". But can also be changed programmatically, in which case, 
- the new Page should also be defined programatically. 
+ Normally, Context is normally set by the top level menu: if a new value 
+ of [ctxt] is posted, there is a change of context. This causes the Page 
+ to be set to "Home". But can also be changed programmatically, in which 
+ case, the new Page can also be defined programatically. 
 
  This version relies on a static main menu, included from index.php.
  If you are going to use a procedure built menu, define the procedure
@@ -23,11 +23,15 @@
 if(isset($_SESSION['Context']))
 	$Context = $_SESSION['Context'];
 
+// Recover previous page by default
+if(isset($_SESSION['Page']))
+	$Page = $_SESSION['Page'];
+
 // The Default should be overwritten with the same content as /home by
 // the install script - but contains developer docs if you don't.
 if(!isset($Context) || ($Context == ""))
 	{
-	$Context = "Default";
+	$Context = "Home";
 	$Page = "Home";
 	};
 
@@ -78,5 +82,9 @@ $_SESSION['Context'] = $Context;
 // handle undefined page (eg on first access to site, or after error).
 if((!isset($Page)) || ($Page == ""))
 	$Page = "Home";
+
+// preserve for next time
+$_SESSION['Page'] = $Page;
+
 ?>
 

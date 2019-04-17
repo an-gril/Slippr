@@ -1,45 +1,66 @@
 <!-- Form_response is part of: 
  Slippr - Bootstrap based Framework
  (C) 2019, Andrew Grillet
- Sani-t.uk - website
- (C) 2019, Sani-t 
 
-This is included in place of the form if context is involed after submit.
-It must process the response to the capture.
+This is included in place of the form if context is invoked after submit.
+It must process the response to the reCaptcha.
 -->
 <?php
-// reCaptcha info
-include "local/captcha_keys.php";
-// Our secret key
-// Who the client actually i
+
 $remoteip = $_SERVER["REMOTE_ADDR"];
+
 $url = "https://www.google.com/recaptcha/api/siteverify";
 
-// Form info
-$name = $_POST["name"];
-$organisation = $_POST["organisation"];
-$email = $_POST["email"];
-$message = $_POST["message"];
 // what recaptcha says
 $response = $_POST["g-recaptcha-response"];
 
 // we need to know what captcha found out
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($curl, CURLOPT_POSTFIELDS, array(
-	'secret' => $secret,
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, array(
+	'secret' => $sitesecret,
 	'response' => $response,
 	'remoteip' => $remoteip
 	));
-$curlData = curl_exec($curl);
-curl_close($curl);
+
+if( ! $curlData = curl_exec($ch))
+    {
+    trigger_error(curl_error($ch));
+    } 
+curl_close($ch);
 
 // Parse data from cURL
 $recaptcha = json_decode($curlData, true);
+	if ($debug > 2)
+		print_r($curlData) . "<br>";
 
-if ($recaptcha["success"])
-	echo "Success at reCapcha!";
-else
-	echo "Failure! He's a fake!";
+if ($recaptcha["success"] == false)
+	{
+
+	if ($debug > 0)
+		{
+  	    print($recaptcha["error-codes"] . "<br>");
+		};
+	return;
+	};
+
+
+// Form info - minimalist gets most replies
+$record[1] = $_POST["name"];
+$record[2] = $_POST["organisation"];
+$record[3] = $_POST["phone"];
+$record[4] = $_POST["email"];
+$record[5] = $_POST["message"];
+
+$csvfile = fopen("tmp/contacts.csv", "a")	
+	or die("<br>Tell the system administrator his contacts file is missing.<br>");
+
+fputcsv($csvfile, $record);
+
+fclose($csvfile);
+?>
+<h2 align=center>Thanks for getting in touch. 
+<br>You should hear from us very soon.</h2>
+
