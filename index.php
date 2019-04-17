@@ -17,7 +17,6 @@
 
 
 // we have to access the session variables first ...
-<?php
 session_start();
 
 print("<HTML> <HEAD>");
