@@ -74,10 +74,11 @@ print("\n</DIV>"); // end LHS (screen)
         include $Menu;
 		};
 
-// Some people like to have a panel below the menu - eg for help.
-	if(file_exists($Context . "/sub_menu.php"))
+// Optional context-independent panel below the menu
+//    - typically used for affiliate advertising.
+	if(file_exists("local/sub_menu.php"))
 		{
-        $Menu =  $Context . "/sub_menu.php";
+        include "local/sub_menu.php";
 		}
 
     print("\n</DIV>"); // end help_right
