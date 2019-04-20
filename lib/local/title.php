@@ -24,6 +24,9 @@ You can delete them in your copy if you will not be needing a reCaptcha.
 	}
 </script>
 <?php
+// change this to go live!
+$live = false;
+
 // you can manually set the debug level by using ssh to edit the setting here.
 // If you have copied this to your own local and have that under version
 // control, then you could set a different default there while debugging.
@@ -32,6 +35,11 @@ You can delete them in your copy if you will not be needing a reCaptcha.
 // debug 2 - flow of control (done  in index.php and include files)
 // debug 3 - WTF? (use when desperate :-)
 $debug = 0;
+
+// no debugging with live data!
+if($live == true)
+	$debug = 0;
+
 ?>
 <!-- Get this stuff from CDN and google cos its faster than hosting yourself, 
 and should be cached by your browser for other websites anyway! -->
