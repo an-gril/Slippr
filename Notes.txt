@@ -1,40 +1,50 @@
-					Design notes for Slippr
-					=======================
+					Design notes for Slippr Version 2
+					=================================
 
-				   NOT PRIVATE: NOW ON GITHUB
+				   		NOT PRIVATE: NOW ON GITHUB
 
 Slippr was intended to provide a quick way to produced minimalist
 web sites. The expectation was that these would look similar to my 
 Wordpress sites (Which they will eventually replace) having:
 
-	A single index file which selects and assembles the content, in
-		a similar manner to Noof.
+	A single index file which selects and assembles the content.
 
 	A header and footer that apply to all pages (Version info can be
 		inserted at time of deployment).
 
-	An optional one-word menu across the top corresponding to magazine sections.
+	An optional one-word menu across the top corresponding to the Contexts.
 		This selects a directory containing the related info - the Context.
-		Small websites may only have one cotext, in which case this menu can
+		Small websites may only have one context, in which case this menu can
 		be safely omitted. 
+
+	An Example Context is supplied which contains the instructions on how to 
+		implement a site. 
 
 	A menu on the RHS with explanatory text (the page menu).
 		This selects a file which is included for the LHS. 
 		A contact form is available which can be included in this area
 		with or without the menu. Where the context has only a single
-		page, this menu can be omitted. 
+		page, this menu can be omitted. The RHS is used for the shopping
+		cart in an e-commerce Context.
 
 	A main (LHS) panel which is filled with a file selected by the menu
-		 on the RHS, but with a default. 
+		 on the RHS, but with a default of Home.php. Home.php is selected
+		by any change of Context caused by the main menu. Programmed
+		changes of COntext can select a new Page at the same time.
 
-	I will experiment with an add-on for e-commerce.
+	E-commerce operation can cause page changes. Stripe integration requires
+		specific pages in the root environment. This set the actual Page
+		required - and may set other variables, before invoking index.php.
 
-This was built and it was soon discovered that the trick was to have an Example
-directory which is over-written on deployment. This holds instructions
-on how to deploy which are normally hidden from end users. This is currently 
-called "Default", but should be renamed "Support".
+	During development, you are expected to maintain all your private work
+		in version control and checkout from there. You may want several
+		copies of your site - your own work will normally be confined to the
+		directory local. (Examples are in lib/local). If you have site-specific
+		data (eg encryption keys) this data should be in files that are not
+		under version control (for security). (You will still need backup ;-)
+
 
  Slippr is (C) 2019, Andrew Grillet, Released under GPL2.0 
 
-12 April 2019
+21 April 2019
 
