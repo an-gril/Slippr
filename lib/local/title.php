@@ -8,7 +8,7 @@ scripts which you need everywhere. (If they are slow to load, you may
 want to put them in the footer instead, or do async loading or something).
 -->
 
-<title>Slippr</title>
+<title>Slippr 2</title>
 
 
 <!-- These scripts are used by reCaptcha, which is used on the contact form.  
@@ -33,7 +33,8 @@ $live = false;
 // Debug levels
 // debug 1 - parameter passing (done in index.php)
 // debug 2 - flow of control (done  in index.php and include files)
-// debug 3 - WTF? (use when desperate :-)
+// debug 3 - Payment processing
+// debug 4 - WTF? (use when desperate :-)
 $debug = 0;
 
 // no debugging with live data!

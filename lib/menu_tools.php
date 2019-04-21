@@ -6,7 +6,7 @@
 // Used for Page menu items
 function page_button($page, $descr)
 {
-print("<input class=\"nav-pills btn-primary\" type=\"submit\" name=\"Page\" value=\"");
+print("<input class=\"nav-pills btn-default\" type=\"submit\" name=\"Page\" value=\"");
 print($page . "\" >&nbsp;&nbsp;&nbsp;$descr</input>");
 }
 
@@ -15,7 +15,7 @@ print($page . "\" >&nbsp;&nbsp;&nbsp;$descr</input>");
 // The menu can be dynamically replaced by text if you wish. 
 function make_page_menu ($menu_definition, $menu_picture, $menu_caption)
 {
-global $context;
+global $Context;
 
 	print("<p align=center>$Context menu</p>");
 	print("<DIV class=\"menu_class\"><form action=\"index.php\" method=\"post\">");
