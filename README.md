@@ -1,2 +1,2 @@
 # Slippr
-Slippr - Slap some sense into your website.
+Slippr - Softly, softly catchee money!
