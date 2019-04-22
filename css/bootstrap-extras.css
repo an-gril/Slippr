@@ -8,3 +8,6 @@
 .table-xtra-condensed > tfoot > tr > td {
   padding: 2px;
 }
+/* This was added for Slippr V2, and is used in T-shoppe */
+li { font-size: 20px; }
+

@@ -32,6 +32,10 @@ if(isset($_GET['clear']))
      session_destroy();
      };
 
+// this is where Google Analytics goes (with your ID site tag).
+if(file_exists("local/analytics.php"))
+        include "local/analytics.php";
+
 // Begin the formatting of the screen ...
    $root_path = __DIR__ ;
 
