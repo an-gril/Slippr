@@ -49,6 +49,7 @@ if ($recaptcha["success"] == false)
 
 
 // Form info
+$record[0] = date('Y-m-d');
 $record[1] = $_POST["name"];
 $record[2] = $_POST["organisation"];
 $record[3] = $_POST["phone"];
