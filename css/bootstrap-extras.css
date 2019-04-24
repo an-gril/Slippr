@@ -10,4 +10,9 @@
 }
 /* This was added for Slippr V2, and is used in T-shoppe */
 li { font-size: 20px; }
-
+/* make pictures resize on mobile */
+img {
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+} 

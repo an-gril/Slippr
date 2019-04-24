@@ -21,6 +21,9 @@ session_start();
 
 print("<HTML> <HEAD>");
 include "local/title.php";
+
+print("<meta name="viewport" content="width=device-width, initial-scale=1.0">");
+
 print("</HEAD>");
 
 print("<BODY id=master>");
