@@ -33,19 +33,21 @@ else
 
 ?>
  <!-- Get this stuff from CDN and google cos its faster than hosting myself, 
-and should be cached from other websites anyway! -->
+and should be cached from other websites anyway! 
+External CSS should be loaded before External Javascript - to allow parallelism
+-->
      
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library (used by Modals) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-
 <!-- My own bootstrap theme CSS code - Needs to be on the target website -->
 <link rel="stylesheet" href="/css/bootstrap-extras.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" async></script> 
+
+<!-- jQuery library (used by Modals) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
 
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -68,7 +70,6 @@ and should be cached from other websites anyway! -->
 </HEAD>
 
 <body id=master>
-
 <?php
 
 // method of recovering if sesson variables are messed up
