@@ -27,7 +27,7 @@ if(isset($_SESSION['Context']))
 // the install script - but contains developer docs if you don't.
 if(!isset($Context) || ($Context == ""))
 	{
-	$Context = "Default";
+	$Context = "Home";
 	$Page = "Home";
 	};
 
