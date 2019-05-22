@@ -22,23 +22,7 @@
 
 // we have to access the session variables first ...
 session_start();
-
-print("<HTML> <HEAD>");
-include "local/title.php";
-// Check if someone has set debug in the title
-if(isset($_SESSION['debug']))
-        $debug = $_SESSION['debug'];
-else
-        $debug = 0;
-
-?>
-
-</HEAD>
-
-<body id=master>
-<?php
-
-// method of recovering if sesson variables are messed up
+// Provide a method of recovering if sesson variables are messed up...
 if(isset($_GET['clear']))
      {
      print("Trying to clear session variables.<br>");
@@ -57,8 +41,25 @@ if (isset($_SESSION['LAST_ACTIVITY']) &&
     session_destroy();
     session_start();
 }
-// Update the time stamp to now
+// Update LAST_ACTIVITY the time stamp to now
 $_SESSION['LAST_ACTIVITY'] = $now;
+
+print("<HTML> <HEAD>");
+include "local/title.php";
+
+// Check if someone has set debug in the title
+if(isset($_SESSION['debug']))
+        $debug = $_SESSION['debug'];
+else
+        $debug = 0;
+?>
+</HEAD>
+
+<!--     ++++ NOW WE BEGIN THE REAL SITE ++++      -->
+
+<body id=master>
+<?php
+
 
 // Begin the formatting of the screen ...
    $root_path = __DIR__ ;
