@@ -52,6 +52,11 @@ if(isset($_SESSION['debug']))
         $debug = $_SESSION['debug'];
 else
         $debug = 0;
+
+// include Google analytics file (with your ID site tag) if present ...
+if(file_exists("local/analytics.php"))
+        include "local/analytics.php";
+
 ?>
 </HEAD>
 
