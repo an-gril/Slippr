@@ -45,6 +45,21 @@ if(isset($_GET['clear']))
      session_destroy();
      };
 
+// Limit session lifetime - excessive session length confuses us and them ...
+$now = $_SERVER['REQUEST_TIME'];
+// timeout is in seconds, so 1 hour is ...
+$timeout_duration = 60 * 60;
+
+// If session has expired, kill it and start afresh ...
+if (isset($_SESSION['LAST_ACTIVITY']) && 
+   ($now - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
+    session_unset();
+    session_destroy();
+    session_start();
+}
+// Update the time stamp to now
+$_SESSION['LAST_ACTIVITY'] = $now;
+
 // Begin the formatting of the screen ...
    $root_path = __DIR__ ;
 
