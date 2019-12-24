@@ -83,10 +83,14 @@ print("\n</DIV>"); // end LHS (screen)
 
 // Optional context-independent panel below the menu
 //    - typically used for affiliate advertising.
-	if(file_exists("local/sub_menu.php"))
+	if(file_exists($Context . "/sub_menu.php"))
+		{
+        include $Context . "/sub_menu.php";
+		}
+	else if(file_exists("local/sub_menu.php"))
 		{
         include "local/sub_menu.php";
-		}
+		};
 
     print("\n</DIV>"); // end help_right
 
